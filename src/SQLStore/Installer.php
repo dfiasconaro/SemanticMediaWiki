@@ -246,6 +246,8 @@ class Installer implements MessageReporter {
 		// #3563, Use the specific wiki-id as identifier for the instance in use
 		$id = Site::id();
 
+		return true;
+
 		if ( !isset( $GLOBALS['smw.json'][$id]['upgrade_key'] ) ) {
 			return false;
 		}
