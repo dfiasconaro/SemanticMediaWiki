@@ -75,6 +75,7 @@ class SetupFile {
 		// #3563, Use the specific wiki-id as identifier for the instance in use
 		$id = Site::id();
 
+		/**
 		if ( !isset( $GLOBALS['smw.json'][$id]['upgrade_key'] ) ) {
 			return false;
 		}
@@ -86,8 +87,9 @@ class SetupFile {
 			$GLOBALS['smw.json'][$id]['in.maintenance_mode'] === true ) {
 			$isGoodSchema = false;
 		}
+         **/
 
-		return $isGoodSchema;
+		return true;
 	}
 
 	/**
